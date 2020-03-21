@@ -1,0 +1,31 @@
+section.content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: $z-content;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    button#show-contact {
+        padding: 16px 24px;
+        border: 1px solid $color-link;
+        border-radius: 5px;
+        font-family: $font-head;
+        font-weight: 500;
+        color: $color-link;
+        background-color: transparent;
+        cursor: pointer;
+        margin-top: 32px;
+    }
+
+    button#show-contact:hover {
+        background-color: $color-link;
+        color: $color-bg;
+    }
+}

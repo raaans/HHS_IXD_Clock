@@ -1,0 +1,7 @@
+@import url("../_partials/_base.scss");
+
+@import url("mobile.scss") (max-width: 600px);
+@import url("tablet.scss") (min-width: 600px);
+@import url("desktop.scss") (min-width: 992px);
+
+/*# sourceMappingURL=query.css.map */
