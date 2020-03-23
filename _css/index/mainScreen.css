@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  animation: all 400ms;
+  transition: all 400ms;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #21272b;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body h1 {
+  font-family: "Oxanium", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 48px;
+  align-self: center;
+}
+body h1#currentGMT {
+  font-size: 128px;
+  line-height: 128px;
+  padding: 8px 8px 92px 8px;
+  user-select: none;
+}
+body h2,
+body li.article {
+  text-align: left;
+  font-family: "Oxanium", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+body h3 {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+body li h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 4px;
+  color: #fff;
+}
+body p {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 16px;
+  color: #fff;
+}
+body li {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: justify;
+  margin-bottom: 8px;
+  color: #fff;
+}
+body .text-centered {
+  text-align: center;
+}
+body a {
+  text-decoration: none;
+  font-family: "Oxanium", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: all ease-in-out 0.2s;
+}
+body a:hover {
+  border-color: #fff;
+}
+body p span.em {
+  color: black;
+}
+body span.required {
+  color: #000000;
+}
+body section.content {
+  z-index: 3;
+}
+body div#background {
+  z-index: 2;
+}
+
+section.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=mainScreen.css.map */

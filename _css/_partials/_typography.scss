@@ -1,19 +1,26 @@
 //textual stuff
 h1 {
     font-family: $font-head;
+    color: $color-copy;
     font-weight: 700;
     font-style: normal;
     font-size: 32px;
     line-height: 48px;
-    margin-bottom: 32px;
-    margin-left: -4px;
     align-self: center;
+}
+
+h1#currentGMT {
+    font-size: 128px;
+    line-height: 128px;
+    padding: 8px 8px 92px 8px;
+    user-select: none;
 }
 
 h2,
 li.article {
     text-align: left;
     font-family: $font-head;
+    color: $color-copy;
     font-weight: 700;
     font-style: normal;
     font-size: 18px;
@@ -22,6 +29,7 @@ li.article {
 
 h3 {
     font-family: $font-copy;
+    color: $color-copy;
     font-weight: 700;
     font-style: normal;
     font-size: 16px;
@@ -41,6 +49,7 @@ li h4 {
 
 p {
     font-family: $font-copy;
+    color: $color-copy;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
@@ -67,6 +76,9 @@ li {
 
 a {
     text-decoration: none;
+    font-family: $font-head;
+    font-size: 14px;
+    line-height: 14px;
     color: $color-link;
     border-bottom: 1px solid transparent;
     transition: all ease-in-out 0.2s;

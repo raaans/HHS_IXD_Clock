@@ -14,7 +14,7 @@ function writeTime() {
     document.getElementById('currentGMT').innerHTML = h + ":" + m;
 
     //refreshes writeTime function every 5s
-    var t = setTimeout(writeTime, 5000);
+    var t = setInterval(writeTime, 5000);
 }
 
 //add a zero in front of single-digit numbers

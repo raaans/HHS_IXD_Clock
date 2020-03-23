@@ -1,0 +1,24 @@
+//font variables
+$font-head: 'Oxanium',
+sans-serif;
+$font-copy: 'Open Sans',
+sans-serif;
+
+//color variables
+$color-copy: #fff; //for main content text
+$color-head: #fff; //for headers
+$color-link: #fff; //for links and buttons
+$color-em: #8b939b; //for emphasized text
+$color-sep: #090B0C; //for separator lines
+$color-bg: #21272b; //background color
+$color-header-bg: #131719; //background colour for the header
+$color-contrast: #000000; //for contrasting elements
+$color-food: #ccac55;
+$color-water: #5575cc;
+$color-fuel: #cc7155;
+
+//z-indices
+$z-background: 1; //for background stuff
+$z-sunmoon: 2; //for the sun & moon
+$z-content: 3; //for main content
+$z-header: 4; //for header & footer

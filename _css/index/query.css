@@ -1,7 +1,3 @@
-@import url("../_partials/_base.scss");
-
-@import url("mobile.scss") (max-width: 600px);
-@import url("tablet.scss") (min-width: 600px);
-@import url("desktop.scss") (min-width: 992px);
-
-/*# sourceMappingURL=query.css.map */
+@import url("dataPad_Small.css") (max-width: 800px);
+@import url("dataPad_Large.css") (min-width: 800px);
+@import url("mainScreen.css")(min-width: 1024px);
