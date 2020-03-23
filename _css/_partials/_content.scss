@@ -1,10 +1,53 @@
+div#sun {
+    position: absolute;
+    top: 70vw;
+    left: 47vw;
+    background-color: white;
+    height: 6vw;
+    width: 6vw;
+    box-shadow: 0px 0px 512px 32px yellow;
+    animation: revCycle 6s linear infinite, colorCycleSun 6s infinite;
+}
+
+div#moon {
+    position: absolute;
+    top: 70vw;
+    left: 48vw;
+    background-color: lightblue;
+    height: 4vw;
+    width: 4vw;
+    box-shadow: 0px 0px 64px 8px white;
+    animation: revCycle 3s linear infinite;
+}
+
+@import 'animations';
+
+div#background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    div#sky {
+        height: 70vh;
+        width: 100vw;
+        //background-color: darkblue;
+    }
+
+    div#earth {
+        height: 30vh;
+        width: 100vw;
+        //background-color: darkgoldenrod;
+    }
+}
+
 section.content {
+    position: absolute;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: $z-content;
 
     section {
         display: flex;

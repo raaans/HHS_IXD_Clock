@@ -14,20 +14,27 @@ body {
     //import typography styling
     @import 'typography';
 
+    //import content styling
+    @import 'content';
+
     //generic body styling
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: $color-bg;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
     section.content {
         z-index: $z-content;
     }
 
-    div#background {
-        z-index: $z-sunmoon;
+    div#background > div {
+        z-index: $z-background;
+    }
+
+    div.sunmoon {
+        z-index: $z-sunmoon
     }
 
 }

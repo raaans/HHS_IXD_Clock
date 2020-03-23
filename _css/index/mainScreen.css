@@ -7,11 +7,28 @@
 }
 
 body {
-  overflow-x: hidden;
+  /*@keyframes revCycle {
+      0% {
+          transform: translate(-64vw, 0vh);
+      }
+
+      25% {}
+
+      50% {
+          transform: translate(0vw, -64vh);
+      }
+
+      75% {}
+
+      100% {
+          transform: translate(64vw, 0vh);
+      }
+  }*/
+  overflow: hidden;
   background-color: #21272b;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 body h1 {
@@ -99,10 +116,105 @@ body p span.em {
 body span.required {
   color: #000000;
 }
+body div#sun {
+  position: absolute;
+  top: 70vw;
+  left: 47vw;
+  background-color: white;
+  height: 6vw;
+  width: 6vw;
+  box-shadow: 0px 0px 512px 32px yellow;
+  animation: revCycle 6s linear infinite, colorCycleSun 6s infinite;
+}
+body div#moon {
+  position: absolute;
+  top: 70vw;
+  left: 48vw;
+  background-color: lightblue;
+  height: 4vw;
+  width: 4vw;
+  box-shadow: 0px 0px 64px 8px white;
+  animation: revCycle 3s linear infinite;
+}
+@keyframes revCycle {
+  from {
+    transform: rotate(0deg) translate(-64vw) rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg) translate(-64vw) rotate(-180deg);
+  }
+}
+@keyframes colorCycleSun {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 128px 32px purple;
+  }
+  10% {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 256px 32px orangered;
+  }
+  50% {
+    background-color: white;
+    box-shadow: 0px 0px 512px 32px yellow;
+  }
+  90% {
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 0px 256px 32px orangered;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 128px 32px purple;
+  }
+}
+body div#background {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+body div#background div#sky {
+  height: 70vh;
+  width: 100vw;
+}
+body div#background div#earth {
+  height: 30vh;
+  width: 100vw;
+}
+body section.content {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body section.content section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body section.content button#show-contact {
+  padding: 16px 24px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-family: "Oxanium", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  margin-top: 32px;
+}
+body section.content button#show-contact:hover {
+  background-color: #fff;
+  color: #21272b;
+}
 body section.content {
   z-index: 3;
 }
-body div#background {
+body div#background > div {
+  z-index: 1;
+}
+body div.sunmoon {
   z-index: 2;
 }
 
