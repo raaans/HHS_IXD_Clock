@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  animation: all 400ms;
+  transition: all 400ms;
+}
+
+body {
+  overflow: hidden;
+  background-color: #21272b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body h1 {
+  font-family: "Oxanium", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  align-self: center;
+}
+body h1#currentGMT {
+  font-size: 128px;
+  line-height: 128px;
+  padding: 8px 8px 92px 8px;
+  user-select: none;
+}
+body h2,
+body li.article {
+  text-align: left;
+  font-family: "Oxanium", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+body h3 {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+body li h4 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 4px;
+  color: #fff;
+}
+body p {
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: justify;
+  margin-bottom: 16px;
+  color: #fff;
+}
+body li {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: justify;
+  margin-bottom: 8px;
+  color: #fff;
+}
+body .text-centered {
+  text-align: center;
+}
+body a {
+  text-decoration: none;
+  font-family: "Oxanium", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: #fff;
+  border-bottom: 1px solid transparent;
+  transition: all ease-in-out 0.2s;
+}
+body a:hover {
+  border-color: #fff;
+}
+body p span.em {
+  color: black;
+}
+body span.required {
+  color: #000000;
+}
+body div#sun {
+  position: absolute;
+  top: 100vw;
+  left: 47vw;
+  background-color: white;
+  height: 6vw;
+  width: 6vw;
+  display: none;
+  box-shadow: 0px 0px 512px 32px yellow;
+}
+body .sunActive {
+  display: block !important;
+  animation: revCycle 30s linear infinite, colorCycleSun 30s infinite;
+}
+body div#moon {
+  position: absolute;
+  top: 100vw;
+  left: 48vw;
+  background-color: lightblue;
+  height: 4vw;
+  width: 4vw;
+  display: none;
+}
+body div#moon div.dark {
+  height: 75%;
+  width: 75%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body div#moon.moonActive {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  box-shadow: 0px 0px 64px 8px white;
+  animation: revCycle 30s linear infinite;
+}
+@keyframes revCycle {
+  from {
+    transform: rotate(30deg) translate(-92vw) rotate(-30deg);
+  }
+  to {
+    transform: rotate(150deg) translate(-92vw) rotate(-150deg);
+  }
+}
+@keyframes colorCycleSun {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 128px 32px purple;
+  }
+  10% {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 256px 32px orangered;
+  }
+  50% {
+    background-color: white;
+    box-shadow: 0px 0px 512px 32px yellow;
+  }
+  90% {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 256px 32px orangered;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 128px 32px purple;
+  }
+}
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-moz-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-o-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+body div#sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: skyblue;
+  background: -webkit-linear-gradient(bottom, skyblue 0%, #fff 100%);
+  background: -linear-gradient(bottom, skyblue 0%, #fff 100%);
+  background: -moz-linear-gradient(bottom, skyblue 0%, #fff 100%);
+}
+body div#sky.nightSky {
+  background-color: black;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 5px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 10px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 18px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+body div#earth {
+  position: absolute;
+  left: -25vw;
+  top: 85vh;
+  height: 30vh;
+  width: 150vw;
+  border-radius: 50%;
+  background-color: mediumseagreen;
+  overflow: hidden;
+}
+body div#earth.nightEarth {
+  background-color: midnightblue;
+  /*Time to finalise the cloud shape*/
+  /*Time to animate*/
+  /*variable speed, opacity, and position of clouds for realistic effect*/
+}
+body div#earth.nightEarth .cloud {
+  width: 200px;
+  height: 60px;
+  background: #fff;
+  border-radius: 200px;
+  -moz-border-radius: 200px;
+  -webkit-border-radius: 200px;
+  position: relative;
+}
+body div#earth.nightEarth .cloud:before,
+body div#earth.nightEarth .cloud:after {
+  content: "";
+  position: absolute;
+  background: #fff;
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  border-radius: 100px;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+}
+body div#earth.nightEarth .cloud:after {
+  width: 120px;
+  height: 120px;
+  top: -55px;
+  left: auto;
+  right: 15px;
+}
+body div#earth.nightEarth .x1 {
+  -webkit-animation: moveclouds 15s linear infinite;
+  -moz-animation: moveclouds 15s linear infinite;
+  -o-animation: moveclouds 15s linear infinite;
+}
+body div#earth.nightEarth .x2 {
+  left: 200px;
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  opacity: 0.6;
+  /*opacity proportional to the size*/
+  /*Speed will also be proportional to the size and opacity*/
+  /*More the speed. Less the time in 's' = seconds*/
+  -webkit-animation: moveclouds 60s linear infinite;
+  -moz-animation: moveclouds 60s linear infinite;
+  -o-animation: moveclouds 60s45s linear infinite;
+}
+body div#earth.nightEarth .x3 {
+  left: -250px;
+  top: -200px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8;
+  /*opacity proportional to the size*/
+  -webkit-animation: moveclouds 20s linear infinite;
+  -moz-animation: moveclouds 20s linear infinite;
+  -o-animation: moveclouds 20s linear infinite;
+}
+body div#earth.nightEarth .x4 {
+  left: 470px;
+  top: -250px;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  opacity: 0.75;
+  /*opacity proportional to the size*/
+  -webkit-animation: moveclouds 30s linear infinite;
+  -moz-animation: moveclouds 30s linear infinite;
+  -o-animation: moveclouds 30s linear infinite;
+}
+body div#earth.nightEarth .x5 {
+  left: -150px;
+  top: -150px;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0.8;
+  /*opacity proportional to the size*/
+  -webkit-animation: moveclouds 45s linear infinite;
+  -moz-animation: moveclouds 45s linear infinite;
+  -o-animation: moveclouds 45s linear infinite;
+}
+@keyframes revCycle {
+  from {
+    transform: rotate(30deg) translate(-92vw) rotate(-30deg);
+  }
+  to {
+    transform: rotate(150deg) translate(-92vw) rotate(-150deg);
+  }
+}
+@keyframes colorCycleSun {
+  0% {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 128px 32px purple;
+  }
+  10% {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 256px 32px orangered;
+  }
+  50% {
+    background-color: white;
+    box-shadow: 0px 0px 512px 32px yellow;
+  }
+  90% {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 256px 32px orangered;
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 128px 32px purple;
+  }
+}
+@-webkit-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-moz-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+@-o-keyframes moveclouds {
+  0% {
+    margin-left: 1000px;
+  }
+  100% {
+    margin-left: -1000px;
+  }
+}
+body section.content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body section.content {
+  z-index: 3;
+}
+body div#background > div {
+  z-index: 1;
+}
+body div.sunmoon {
+  z-index: 2;
+}
+
+section.content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=dataPad_Large.css.map */
