@@ -1,4 +1,5 @@
 function writeTime() {
+
     //get current time
     var currentTime = new Date();
 
@@ -23,4 +24,31 @@ function addZero(i) {
         i = "0" + i
     };
     return i;
+}
+
+function dayLight() {
+    var sun = document.getElementById("sun");
+    var moon = document.getElementById("moon");
+    var sky = document.getElementById("sky");
+    var earth = document.getElementById("earth");
+
+    //get current time
+    var currentTime = new Date();
+    var h = currentTime.getHours();
+
+    if (h > 8 && h < 20) {
+        sun.classList.add('sunActive');
+        moon.classList.remove('moonActive');
+        sky.classList.remove("nightSky");
+        earth.classList.remove("nightEarth");
+
+    } else {
+        sun.classList.remove('sunActive');
+        moon.classList.add('moonActive');
+        sky.classList.add("nightSky");
+        earth.classList.add("nightEarth");
+    };
+
+    //refreshes dayLight function every 5s
+    var t = setInterval(dayLight, 5000);
 }
